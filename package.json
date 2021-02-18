@@ -1,14 +1,14 @@
 {
-  "name": "@pact-foundation/version-from-git",
+  "name": "@pact-foundation/absolute-version",
   "version": "0.0.1",
   "description": "Helper module to generate pact-friendly versions from git tags",
   "main": "dist/index.js",
   "bin": {
-    "version-for-pact": "dist/bin/pact-version-from-git.sh"
+    "absolute-version-from-git-tag": "dist/bin/absolute-version-from-git-tag.js"
   },
   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "tsc",
+    "prebuild": "rimraf dist && npm run lint && npm run test",
+    "build": "tsc --project tsconfig.dist.json",
     "test": "jest",
     "lint": "eslint 'src/**/*.ts' --ext .ts --config .eslintrc.json",
     "release": "standard-version"

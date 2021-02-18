@@ -1,0 +1,12 @@
+# folders
+
+src/
+coverage/
+scripts/
+
+# files
+.eslintrc.json
+tsconfig.json
+tsconfig.dist.json
+.prettierrc
+jest.config.ts

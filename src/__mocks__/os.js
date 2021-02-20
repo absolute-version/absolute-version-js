@@ -1,5 +1,5 @@
 const os = jest.createMockFromModule('os');
 
-os.hostname = () => 'HOSTNAME';
+os.hostname = jest.fn().mockReturnValue('HOSTNAME.com.au');
 
 module.exports = os;

@@ -1,5 +1,6 @@
 import { gitDescribeSync } from 'git-describe';
 import { branch } from 'git-rev-sync';
+import { hostname } from 'os';
 
 import { versionFromGitTag } from '.';
 
@@ -19,6 +20,17 @@ describe('version-from-git-tag', () => {
         (gitDescribeSync as jest.Mock).mockReturnValue({
           ...gitDescribe,
           dirty,
+        });
+      });
+      describe('with a hostname with no dots', () => {
+        it('displays the version number correctly', () => {
+          beforeEach(() => {
+            (hostname as jest.Mock).mockReturnValue('HOSTNAME');
+          });
+
+          expect(versionFromGitTag()).toEqual(
+            '9234bfb-featwhatever+9234bfb.SNAPSHOT.HOSTNAME'
+          );
         });
       });
       it('displays the version number correctly', () => {

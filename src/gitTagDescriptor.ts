@@ -1,6 +1,7 @@
 import { gitDescribeSync, GitInfo } from 'git-describe';
-import { hostname } from 'os';
+
 import { branch as gitBranch } from 'git-rev-sync';
+import { getHostnameString } from './hostname';
 
 import { Descriptor } from './output';
 
@@ -8,7 +9,7 @@ export const getBranchString = (clean: (s: string) => string): string =>
   clean(gitBranch(process.cwd()));
 
 const dirtyString = (gitInfo: GitInfo, clean: (s: string) => string) =>
-  gitInfo.dirty ? `.SNAPSHOT.${clean(hostname())}` : '';
+  gitInfo.dirty ? `.SNAPSHOT.${clean(getHostnameString())}` : '';
 
 const gitHash = (gitInfo: GitInfo) => gitInfo.hash.substring(1);
 

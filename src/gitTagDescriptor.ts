@@ -5,8 +5,25 @@ import { getHostnameString } from './hostname';
 
 import { Descriptor } from './output';
 
+const branchInCI = (s: string) =>
+  // If the branch came out as a detached head, we're in CI, so let's try to figure out the branch name
+  s.startsWith('Detached')
+    ? // Appveyor
+      process.env.APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH ||
+      process.env.APPVEYOR_REPO_BRANCH || // Appveyor defines this as the target branch in a PR, so the PR branch needs to be checked first
+      // GitLab
+      process.env.CI_COMMIT_BRANCH || // Gitlab does not define this in PRs, so the PR branch name is next
+      process.env.CI_EXTERNAL_PULL_REQUEST_SOURCE_BRANCH_NAME ||
+      // CircleCI
+      process.env.CIRCLE_BRANCH ||
+      // Travis
+      process.env.TRAVIS_PULL_REQUEST_BRANCH ||
+      process.env.TRAVIS_BRANCH || // Travis defines this as the target branch in a PR, so the PR branch needs to be checked first
+      s
+    : s;
+
 export const getBranchString = (clean: (s: string) => string): string =>
-  clean(gitBranch(process.cwd()));
+  clean(branchInCI(gitBranch(process.cwd())));
 
 const dirtyString = (gitInfo: GitInfo, clean: (s: string) => string) =>
   gitInfo.dirty ? `.SNAPSHOT.${clean(getHostnameString())}` : '';

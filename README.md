@@ -16,7 +16,9 @@ _exactly_ is deployed or being tested.
 It is a lot like the output of `git describe`, except it is semver
 compatible, and includes the branch name.
 
-Confused about why you would want this? Skip below to [why would I want this](#why-would-i-want-this)
+Confused about why you would want this? Skip below to [why would I want this](#why-would-i-want-this).
+
+_Note for everyone: Although this is a pact-foundation project, it is standalone from Pact, and is useful anywhere you want an absolute version for every git commit_
 
 ## What it does
 
@@ -25,6 +27,38 @@ your git tags and current git state. If you are using semver, then all
 absolute versions are also semver compliant, using the prerelease and build metadata.
 
 Since every commit is a different version of your software, have a different version with `absolute-version`.
+
+## Usage
+
+- **`versionFromGitTag() => string`**
+
+Returns the `absolute-version` as a string, using the current working directory from `process.cwd()`.
+
+```
+import { versionFromGitTag } from '@pact-foundation/absolute-version'
+
+const version = versionFromGitTag();
+```
+
+### CLI
+
+```
+npx @pact-foundation/absolute-version
+```
+
+Or alternatively:
+
+```
+npm install --save-dev @pact-foundation/absolute-version
+```
+
+package.json:
+
+```
+scripts: {
+  test: "VERSION=$(absolute-version-from-git-tag) jest" // or whatever
+}
+```
 
 ### Release versions
 
@@ -138,32 +172,6 @@ Common patterns like build numbers and appending the commit sha can be used
 to answer these questions already, but `absolute-version` has the advantage
 that it is easier for a human to read without needing to consult another
 source.
-
-## API
-
-- **`versionFromGitTag() => string`**
-
-Returns the `absolute-version` as a string, using the current working directory from `process.cwd()`.
-
-```
-import { versionFromGitTag } from '@pact-foundation/absolute-version'
-
-const version = versionFromGitTag();
-```
-
-## CLI
-
-```
-npm install @pact-foundation/absolute-version
-```
-
-package.json:
-
-```
-scripts: {
-  test: "VERSION=$(absolute-version-from-git-tag) jest" // or whatever
-}
-```
 
 ## Contact
 

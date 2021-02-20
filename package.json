@@ -1,7 +1,7 @@
 {
   "name": "@pact-foundation/absolute-version",
   "version": "0.0.1",
-  "description": "Helper module to generate pact-friendly versions from git tags",
+  "description": "Reads your git tags to generate a unique human-readable version for every git commit",
   "main": "dist/index.js",
   "bin": {
     "absolute-version-from-git-tag": "dist/bin/absolute-version-from-git-tag.js"

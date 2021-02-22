@@ -1,7 +1,7 @@
 # Absolute Version
 
 [![npm](https://img.shields.io/npm/v/@pact-foundation/absolute-version.svg)](https://www.npmjs.com/package/@pact-foundation/absolute-version)
-[![Known Vulnerabilities](https://snyk.io/test/github/pact-foundation/absolute-version-js/badge.svg?targetFile=package.json)](https://snyk.io/test/github/pact-foundation/absolute-version?targetFile=package.json)
+[![Known Vulnerabilities](https://snyk.io/test/github/pact-foundation/absolute-version-js/badge.svg?targetFile=package.json)](https://snyk.io/test/github/pact-foundation/absolute-version-js?targetFile=package.json)
 [![license](https://img.shields.io/github/license/pact-foundation/absolute-version-js.svg)](https://github.com/pact-foundation/absolute-version/blob/main/LICENSE)
 [![dependencies](https://img.shields.io/david/pact-foundation/absolute-version.svg)](https://www.npmjs.com/package/@pact-foundation/absolute-version)
 [![slack](http://slack.pact.io/badge.svg)](http://slack.pact.io)

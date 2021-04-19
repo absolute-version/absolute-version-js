@@ -11,6 +11,9 @@
     "build": "tsc --project tsconfig.dist.json",
     "test": "jest",
     "lint": "eslint 'src/**/*.ts' --ext .ts --config .eslintrc.json",
+    "format:base": "prettier \"src/**/*.{ts,js}\"",
+    "format:fix": "npm run format:base -- --write",
+    "format:check": "npm run format:base -- --check",
     "release": "standard-version"
   },
   "keywords": [
@@ -23,6 +26,7 @@
   "author": "Timothy Jones",
   "license": "MIT",
   "devDependencies": {
+    "@pact-foundation/pact-js-prettier-config": "^1.0.0",
     "@types/git-rev-sync": "^2.0.0",
     "@types/semver": "^7.3.4",
     "@typescript-eslint/eslint-plugin": "^4.15.0",

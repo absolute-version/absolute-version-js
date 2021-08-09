@@ -13,7 +13,9 @@ const branchInCI = (s: string) =>
       process.env.APPVEYOR_REPO_BRANCH || // Appveyor defines this as the target branch in a PR, so the PR branch needs to be checked first
       // GitLab
       process.env.CI_COMMIT_BRANCH || // Gitlab does not define this in PRs, so the PR branch name is next
+      process.env.CI_MERGE_REQUEST_SOURCE_BRANCH_NAME ||
       process.env.CI_EXTERNAL_PULL_REQUEST_SOURCE_BRANCH_NAME ||
+      process.env.CI_COMMIT_REF_NAME || // This might be the tag name, but we shouldn't be looking at this if we're on a specfic tag
       // CircleCI
       process.env.CIRCLE_BRANCH ||
       // Travis

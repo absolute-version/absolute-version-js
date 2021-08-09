@@ -195,10 +195,17 @@ issue and we'll make it configurable.
 
 ### Why does absolute-version look for tags prefixed with `v`?
 
-This is to match the tags produced by the excellent tools
+This is to match the tagging conventions that the excellent tools
 [`standard-version`](https://github.com/conventional-changelog/standard-version)
-and [`semantic-release`](https://github.com/conventional-changelog/standard-version).
-You can configure alternate tag styles, see the config in the API and CLI sections above.
+and [`semantic-release`](https://github.com/conventional-changelog/standard-version)
+use by default. You can configure alternate tag styles, see the config in the
+API and CLI sections above.
+
+### Why doesn't absolute-version's output include the `v`?
+
+That's because the `v` is not part of the [semver spec](https://semver.org/). I don't
+know why the `v` is included in the defacto git tagging convention, but not in other parts of
+the semver ecosystem. Maybe it's to make it clear that it's a version number? You decide.
 
 ## Why would I want this?
 

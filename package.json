@@ -7,13 +7,14 @@
     "absolute-version-from-git-tag": "dist/bin/absolute-version-from-git-tag.js"
   },
   "scripts": {
-    "prebuild": "rimraf dist && npm run lint && npm run test",
+    "prebuild": "rimraf dist && npm run lint && npm run format:check && npm run test",
     "build": "tsc --project tsconfig.dist.json",
     "test": "jest",
     "lint": "eslint 'src/**/*.ts' --ext .ts --config .eslintrc.json",
     "format:base": "prettier \"src/**/*.{ts,js}\"",
     "format:fix": "npm run format:base -- --write",
     "format:check": "npm run format:base -- --check",
+    "prerelease": "npm run build",
     "release": "standard-version"
   },
   "keywords": [

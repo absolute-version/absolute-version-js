@@ -22,6 +22,13 @@ _exactly_ is deployed or being tested.
 It is a lot like the output of `git describe`, except it is semver
 compatible, and includes the branch name.
 
+### Example versions
+
+- If this is a tagged release version (for example, a tag of `v1.2.3` or `v1.2.3-beta`), then the versions look as you would expect: `1.2.3` or `1.2.3-beta`
+- If this is not a tagged release version: `1.2.3-master+26.6fe275b` (from master, 26 commits after 1.2.3 was released, with the git hash 6fe275b)
+- If this is not a tagged release version, but was based on a a pre-release version (eg 1.2.3-beta), then `1.2.3-beta.master+26.6fe275b`
+- If this is from a dirty working tree, you get `SNAPSHOT` and the hostname, eg `1.2.3-master+26.6fe275b.SNAPSHOT.StevesMachine`
+
 Confused about why you would want this? Skip below to [why would I want this](#why-would-i-want-this).
 
 _Note for everyone: Although this is a pact-foundation project, it is standalone from Pact, and is useful anywhere you want an absolute version for every git commit_
@@ -34,16 +41,10 @@ absolute versions are also semver compliant, using the prerelease and build meta
 
 Since every commit is a different version of your software, have a different version with `absolute-version`.
 
-## Usage
-
-- **`versionFromGitTag() => string`**
-
-Returns the `absolute-version` as a string, using the current working directory from `process.cwd()`.
+## Installing
 
 ```
-import { versionFromGitTag } from '@pact-foundation/absolute-version'
-
-const version = versionFromGitTag();
+npm install --save-dev @pact-foundation/absolute-version
 ```
 
 ### CLI
@@ -66,10 +67,55 @@ scripts: {
 }
 ```
 
+If your tags don't conform to `vX.Y.Z`, then you can pass an alternate tag glob:
+
+```
+npx @pact-foundation/absolute-version --tagGlob '[0-9]*'
+```
+
+The default is `'v[0-9]*'`. The format for the glob is the same as for `--match` in `git describe`.
+
+### API Usage
+
+- **`versionFromGitTag: (config: AbsoluteVersionConfig) => string`**
+
+Returns the `absolute-version` as a string, using the current working directory from `process.cwd()`.
+
+```
+import { versionFromGitTag } from '@pact-foundation/absolute-version'
+
+const version = versionFromGitTag();
+```
+
+Configuration:
+
+```
+AbsoluteVersionConfig {
+  tagGlob?: string;
+}
+```
+
+If your tags don't conform to `vX.Y.Z`, then you can pass an alternate glob in the options:
+
+```
+import { versionFromGitTag } from '@pact-foundation/absolute-version'
+
+const version = versionFromGitTag({
+  tagGlob: '[0-9]*'
+});
+```
+
+The default is `v[0-9]*`.
+The format for the glob is the same as for `--match` in `git describe`.
+
+## Detailed description
+
+Want to know the exact behaviour in each sitation? Read on!
+
 ### Release versions
 
-If the most recent commit is tagged with a semver tag, eg `v1.2.3`, then it will
-output just the version number (`1.2.3`).
+If the most recent commit is tagged with a semver tag, eg `v1.2.3` or `v10.2.5-beta`, then it will
+output just the version number (`1.2.3` or `10.2.5-beta`).
 
 ### Prerelease version
 
@@ -91,7 +137,7 @@ This is a [semver 2.0.0](https://semver.org/) prerelease version string. Loosely
 - `26`: The number of commits on this branch (`master`) since the last version (`1.2.3`)
 - `6fe275b`: The commit hash for this version, useful for disambiguation
 
-If the tag is already a prerelease version, eg `v.1.2.3-beta`, then the branch name is appended
+If the previous release was already a prerelease version, eg `v.1.2.3-beta`, then the branch name is appended
 to the prerelease metadata:
 
 ```
@@ -146,6 +192,13 @@ other characters, we drop them. Since
 the git hash is included, you shouldn't experience collisions between version
 numbers. If this decision is causing problems, please open an
 issue and we'll make it configurable.
+
+### Why does absolute-version look for tags prefixed with `v`?
+
+This is to match the tags produced by the excellent tools
+[`standard-version`](https://github.com/conventional-changelog/standard-version)
+and [`semantic-release`](https://github.com/conventional-changelog/standard-version).
+You can configure alternate tag styles, see the config in the API and CLI sections above.
 
 ## Why would I want this?
 

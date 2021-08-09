@@ -29,6 +29,7 @@
     "@pact-foundation/pact-js-prettier-config": "^1.0.0",
     "@types/git-rev-sync": "^2.0.0",
     "@types/semver": "^7.3.4",
+    "@types/yargs": "^17.0.2",
     "@typescript-eslint/eslint-plugin": "^4.15.0",
     "@typescript-eslint/parser": "^4.15.0",
     "eslint": "^7.20.0",
@@ -48,7 +49,8 @@
   "dependencies": {
     "git-describe": "^4.0.4",
     "git-rev-sync": "^3.0.1",
-    "semver": "^7.3.4"
+    "semver": "^7.3.4",
+    "yargs": "^17.1.0"
   },
   "standard-version": {
     "types": [

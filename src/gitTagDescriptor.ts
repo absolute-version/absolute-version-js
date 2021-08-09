@@ -1,6 +1,7 @@
 import { gitDescribeSync, GitInfo } from 'git-describe';
 
 import { branch as gitBranch } from 'git-rev-sync';
+import { AbsoluteVersionConfig } from 'types';
 import { getHostnameString } from './hostname';
 
 import { Descriptor } from './output';
@@ -38,8 +39,11 @@ const tagOrHash = (gitInfo: GitInfo) =>
 const distance = (gitInfo: GitInfo) =>
   gitInfo.distance === 0 || gitInfo.distance ? `${gitInfo.distance}.` : '';
 
-export const gitTagDescriptor = (clean: (s: string) => string): Descriptor => {
-  const gitInfo = gitDescribeSync();
+export const gitTagDescriptor = (
+  clean: (s: string) => string,
+  config: AbsoluteVersionConfig
+): Descriptor => {
+  const gitInfo = gitDescribeSync({ match: config.tagGlob });
   const branch = getBranchString(clean);
   return {
     versionSuffix: () =>

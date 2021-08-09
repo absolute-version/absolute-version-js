@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/pact-foundation/absolute-version-js/compare/v0.0.2...v0.0.3) (2021-08-09)
+
+
+### Features
+
+* Add ability to specify alternate globs for picking up git tags ([93c7f6c](https://github.com/pact-foundation/absolute-version-js/commit/93c7f6cda487b9206a52d14a3ee5d86168a0cca6))
+
+
+### Fixes and Improvements
+
+* Improve branch detection for gitlab ([a742118](https://github.com/pact-foundation/absolute-version-js/commit/a7421183ce54fc412ea4b81ecdf4450375902eb9))
+
 ### [0.0.2](https://github.com/pact-foundation/absolute-version-js/compare/v0.0.1...v0.0.2) (2021-02-20)
 
 

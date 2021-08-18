@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/pact-foundation/absolute-version-js/compare/v0.0.3...v0.0.4) (2021-08-18)
+
+
+### Fixes and Improvements
+
+* bump version of git-describe to get better behaviour when git is missing ([920e257](https://github.com/pact-foundation/absolute-version-js/commit/920e257893d7d36db300967be09a6c3d837a79c0))
+
 ### [0.0.3](https://github.com/pact-foundation/absolute-version-js/compare/v0.0.2...v0.0.3) (2021-08-09)
 
 

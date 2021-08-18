@@ -1,6 +1,6 @@
 {
   "name": "@pact-foundation/absolute-version",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Reads your git tags to generate a unique human-readable version for every git commit",
   "main": "dist/index.js",
   "bin": {

@@ -1,10 +1,8 @@
 # Absolute Version
 
 [![npm](https://img.shields.io/npm/v/@pact-foundation/absolute-version.svg)](https://www.npmjs.com/package/@pact-foundation/absolute-version)
-[![Known Vulnerabilities](https://snyk.io/test/github/pact-foundation/absolute-version-js/badge.svg?targetFile=package.json)](https://snyk.io/test/github/pact-foundation/absolute-version-js?targetFile=package.json)
-[![license](https://img.shields.io/github/license/pact-foundation/absolute-version-js.svg)](https://github.com/pact-foundation/absolute-version/blob/main/LICENSE)
-[![dependencies](https://img.shields.io/david/pact-foundation/absolute-version.svg)](https://www.npmjs.com/package/@pact-foundation/absolute-version)
-[![slack](http://slack.pact.io/badge.svg)](http://slack.pact.io)
+[![Known Vulnerabilities](https://snyk.io/test/github/absolute-version/absolute-version-js/badge.svg?targetFile=package.json)](https://snyk.io/test/github/absolute-version/absolute-version-js?targetFile=package.json)
+[![license](https://img.shields.io/github/license/absolute-version/absolute-version-js.svg)](https://github.com/absolute-version/absolute-version/blob/main/LICENSE)
 
 Do you use git tags to mark releases in a semver style? Do you want to be able to reason about
 the exact version of your application? Absolute Version is for you!
@@ -30,8 +28,6 @@ compatible, and includes the branch name.
 - If this is from a dirty working tree, you get `SNAPSHOT` and the hostname, eg `1.2.3-master+26.6fe275b.SNAPSHOT.StevesMachine`
 
 Confused about why you would want this? Skip below to [why would I want this](#why-would-i-want-this).
-
-_Note for everyone: Although this is a pact-foundation project, it is standalone from Pact, and is useful anywhere you want an absolute version for every git commit_
 
 ## What it does
 
@@ -239,6 +235,12 @@ to answer these questions already, but `absolute-version` has the advantage
 that it is easier for a human to read without needing to consult another
 source.
 
+## History
+
+This repository was originally under the [pact-foundation](https://github.com/pact-foundation) organisation. However, since the use cases for absolute-version are wider than just Pact, and since it's not necessary to use absolute-version when using Pact, it was moved out to its own organisation in January 2022.
+
 ## Contact
 
-Join us on [Slack](https://slack.pact.io)
+The best way to get in touch if you have questions about this project is to [open an issue](https://github.com/absolute-version/absolute-version-js/issues/new). 
+
+If you have a question or issue that you don't want to post publicly (eg a security issue), you can contact the lead developer at [timothy.l.jones+absolute-version@gmail.com](mailto:timothy.l.jones+absolute-version@gmail.com).

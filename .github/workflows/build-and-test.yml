@@ -20,6 +20,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: scripts/ci/build-and-test.sh
+      - run: ci/build-and-test.sh
         env:
           NODE_VERSION: ${{ matrix.node-version }}

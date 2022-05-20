@@ -3,8 +3,7 @@
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "airbnb-typescript-lite",
-    "prettier",
-    "prettier/@typescript-eslint"
+    "prettier"
   ],
   "plugins": ["import"],
   "settings": {

@@ -23,11 +23,10 @@ describe('version-from-git-tag', () => {
         });
       });
       describe('with a hostname with no dots', () => {
+        beforeEach(() => {
+          (hostname as jest.Mock).mockReturnValue('HOSTNAME');
+        });
         it('displays the version number correctly', () => {
-          beforeEach(() => {
-            (hostname as jest.Mock).mockReturnValue('HOSTNAME');
-          });
-
           expect(versionFromGitTag()).toEqual(
             '9234bfb-featwhatever+9234bfb.SNAPSHOT.HOSTNAME'
           );

@@ -3,6 +3,8 @@
 src/
 coverage/
 scripts/
+.github/
+ci/
 
 # files
 .eslintrc.json

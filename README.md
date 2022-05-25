@@ -7,6 +7,10 @@
 Do you use git tags to mark releases in a semver style? Do you want to be able to reason about
 the exact version of your application? Absolute Version is for you!
 
+This tool prints out human-readable versions for when you are between versions, useful for reasoning about versions during CI and testing.
+
+## Rationale
+
 When testing and releasing software, it is useful to be able to reason about
 the absolute version of an application. Some tools (eg [Pact](https://pact.io))
 require a [clear and specific
@@ -241,6 +245,6 @@ This repository was originally under the [pact-foundation](https://github.com/pa
 
 ## Contact
 
-The best way to get in touch if you have questions about this project is to [open an issue](https://github.com/absolute-version/absolute-version-js/issues/new). 
+The best way to get in touch if you have questions about this project is to [open an issue](https://github.com/absolute-version/absolute-version-js/issues/new).
 
 If you have a question or issue that you don't want to post publicly (eg a security issue), you can contact the lead developer at [timothy.l.jones+absolute-version@gmail.com](mailto:timothy.l.jones+absolute-version@gmail.com).

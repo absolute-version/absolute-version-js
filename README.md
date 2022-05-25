@@ -1,6 +1,6 @@
 # Absolute Version
 
-[![npm](https://img.shields.io/npm/v/@pact-foundation/absolute-version.svg)](https://www.npmjs.com/package/@pact-foundation/absolute-version)
+[![npm](https://img.shields.io/npm/v/absolute-version.svg)](https://www.npmjs.com/package/absolute-version)
 [![Known Vulnerabilities](https://snyk.io/test/github/absolute-version/absolute-version-js/badge.svg?targetFile=package.json)](https://snyk.io/test/github/absolute-version/absolute-version-js?targetFile=package.json)
 [![license](https://img.shields.io/github/license/absolute-version/absolute-version-js.svg)](https://github.com/absolute-version/absolute-version/blob/main/LICENSE)
 
@@ -44,19 +44,19 @@ Since every commit is a different version of your software, have a different ver
 ## Installing
 
 ```
-npm install --save-dev @pact-foundation/absolute-version
+npm install --save-dev absolute-version
 ```
 
 ### CLI
 
 ```
-npx @pact-foundation/absolute-version
+npx absolute-version
 ```
 
 Or alternatively:
 
 ```
-npm install --save-dev @pact-foundation/absolute-version
+npm install --save-dev absolute-version
 ```
 
 package.json:
@@ -70,7 +70,7 @@ scripts: {
 If your tags don't conform to `vX.Y.Z`, then you can pass an alternate tag glob:
 
 ```
-npx @pact-foundation/absolute-version --tagGlob '[0-9]*'
+npx absolute-version --tagGlob '[0-9]*'
 ```
 
 The default is `'v[0-9]*'`. The format for the glob is the same as for `--match` in `git describe`.
@@ -82,7 +82,7 @@ The default is `'v[0-9]*'`. The format for the glob is the same as for `--match`
 Returns the `absolute-version` as a string, using the current working directory from `process.cwd()`.
 
 ```
-import { versionFromGitTag } from '@pact-foundation/absolute-version'
+import { versionFromGitTag } from absolute-version'
 
 const version = versionFromGitTag();
 ```
@@ -98,7 +98,7 @@ AbsoluteVersionConfig {
 If your tags don't conform to `vX.Y.Z`, then you can pass an alternate glob in the options:
 
 ```
-import { versionFromGitTag } from '@pact-foundation/absolute-version'
+import { versionFromGitTag } from 'absolute-version'
 
 const version = versionFromGitTag({
   tagGlob: '[0-9]*'

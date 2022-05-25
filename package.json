@@ -1,5 +1,5 @@
 {
-  "name": "@pact-foundation/absolute-version",
+  "name": "absolute-version",
   "version": "0.0.4",
   "description": "Reads your git tags to generate a unique human-readable version for every git commit",
   "main": "dist/index.js",
@@ -34,6 +34,7 @@
     "@types/yargs": "^17.0.2",
     "@typescript-eslint/eslint-plugin": "^5.25.0",
     "@typescript-eslint/parser": "^5.25.0",
+    "commit-and-tag-version": "^9.5.0",
     "eslint": "^8.15.0",
     "eslint-config-airbnb-typescript-lite": "^13.0.1",
     "eslint-config-prettier": "^8.5.0",
@@ -43,7 +44,6 @@
     "jest": "^28.1.0",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
-    "commit-and-tag-version": "^9.3.1",
     "ts-jest": "^28.0.2",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.5"

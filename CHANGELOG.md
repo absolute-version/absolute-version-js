@@ -1,6 +1,17 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [1.0.0](https://github.com/absolute-version/absolute-version-js/compare/v0.0.4...v1.0.0) (2022-05-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* There are no breaking changes, this release just marks the solidification of the public API.
+
+### Features
+
+* Add JSDoc for intellisense ([c0b4cf6](https://github.com/absolute-version/absolute-version-js/commit/c0b4cf6038f8345da58260fd554f6d0f479b1699))
 
 ### [0.0.4](https://github.com/pact-foundation/absolute-version-js/compare/v0.0.3...v0.0.4) (2021-08-18)
 

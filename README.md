@@ -9,6 +9,8 @@ the exact version of your application? Absolute Version is for you!
 
 This tool prints out human-readable versions for when you are between versions, useful for reasoning about versions during CI and testing.
 
+**Note: Versions prior to 1.0.0 were named `@pact-foundation/absolute-version`, found [here](https://www.npmjs.com/package/@pact-foundation/absolute-version)**
+
 ## Rationale
 
 When testing and releasing software, it is useful to be able to reason about

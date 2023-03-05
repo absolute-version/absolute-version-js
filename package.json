@@ -26,6 +26,7 @@
   ],
   "author": "Timothy Jones",
   "license": "MIT",
+  "repository": "https://github.com/absolute-version/absolute-version-js",
   "devDependencies": {
     "@pact-foundation/pact-js-prettier-config": "^1.0.0",
     "@types/git-rev-sync": "^2.0.0",

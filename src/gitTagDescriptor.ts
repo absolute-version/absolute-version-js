@@ -31,7 +31,8 @@ export const getBranchString = (clean: (s: string) => string): string =>
 const dirtyString = (gitInfo: GitInfo, clean: (s: string) => string) =>
   gitInfo.dirty ? `.SNAPSHOT.${clean(getHostnameString())}` : '';
 
-const gitHash = (gitInfo: GitInfo) => gitInfo.hash.substring(1);
+const gitHash = (gitInfo: GitInfo) =>
+  gitInfo.hash.startsWith('g') ? gitInfo.hash.substring(1) : gitInfo.hash;
 
 const tagOrHash = (gitInfo: GitInfo) =>
   gitInfo.tag ? gitInfo.tag : gitHash(gitInfo);

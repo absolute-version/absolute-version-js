@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.0](https://github.com/absolute-version/absolute-version-js/compare/v1.0.2...v2.0.0) (2024-06-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* Drop support for node 14 and 16, add support for node 22
+
+### Bug Fixes
+
+* Include typescript source in bundle ([ef984e4](https://github.com/absolute-version/absolute-version-js/commit/ef984e4643d1de2e4cddb3c7a3ba62a75f394ad8))
+
+
+### Miscellaneous Chores
+
+* Drop support for node 14 and 16, add support for node 22 ([268eb9c](https://github.com/absolute-version/absolute-version-js/commit/268eb9cebb90a01732ddd5b41120afcb8625e36c))
+
 ## [1.0.2](https://github.com/absolute-version/absolute-version-js/compare/v1.0.1...v1.0.2) (2023-03-17)
 
 

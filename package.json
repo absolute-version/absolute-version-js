@@ -1,6 +1,6 @@
 {
   "name": "absolute-version",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Reads your git tags to generate a unique human-readable version for every git commit",
   "main": "dist/index.js",
   "bin": {

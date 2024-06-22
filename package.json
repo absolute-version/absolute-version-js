@@ -47,7 +47,7 @@
     "rimraf": "^3.0.2",
     "ts-jest": "^28.0.2",
     "ts-node": "^9.1.1",
-    "typescript": "^4.1.5"
+    "typescript": "^5.5.2"
   },
   "dependencies": {
     "git-describe": "^4.1.0",

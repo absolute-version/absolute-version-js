@@ -43,7 +43,7 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jest": "^26.2.2",
     "jest": "^28.1.0",
-    "prettier": "^3.4.1",
+    "prettier": "^3.4.2",
     "rimraf": "^6.0.1",
     "ts-jest": "^28.0.2",
     "ts-node": "^10.9.2",

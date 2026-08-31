@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.0](https://github.com/absolute-version/absolute-version-js/compare/v2.0.0...v3.0.0) (2026-08-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* Drop support for node version 20 and earlier, add support for node 26
+
+### Miscellaneous Chores
+
+* Drop support for node version 20 and earlier, add support for node 26 ([c3b52ff](https://github.com/absolute-version/absolute-version-js/commit/c3b52ff321c1ce03d564671bd747d3f3a02fb8fd))
+
 ## [2.0.0](https://github.com/absolute-version/absolute-version-js/compare/v1.0.2...v2.0.0) (2024-06-22)
 
 

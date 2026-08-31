@@ -1,12 +1,12 @@
 import { gitDescribeSync } from 'git-describe';
-import { branch } from 'git-rev-sync';
+import { gitBranch } from './gitBranch';
 import { hostname } from 'os';
 
 import { versionFromGitTag } from '.';
 
 jest.mock('git-describe');
 jest.mock('os');
-jest.mock('git-rev-sync');
+jest.mock('./gitBranch');
 
 describe('version-from-git-tag', () => {
   describe('with no tag', () => {
@@ -139,7 +139,7 @@ describe('version-from-git-tag', () => {
       };
 
       describe('when on a branch named feat/whatever', () => {
-        (branch as jest.Mock).mockReturnValue('feat/whatever');
+        (gitBranch as jest.Mock).mockReturnValue('feat/whatever');
 
         describe('when the repo is not on an exact tag', () => {
           const distance = 1;

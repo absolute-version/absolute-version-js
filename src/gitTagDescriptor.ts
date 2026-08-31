@@ -1,6 +1,6 @@
 import { gitDescribeSync, GitInfo } from 'git-describe';
 
-import { branch as gitBranch } from 'git-rev-sync';
+import { gitBranch } from './gitBranch';
 import { AbsoluteVersionConfig } from 'types';
 import { getHostnameString } from './hostname';
 

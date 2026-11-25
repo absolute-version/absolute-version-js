@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.1](https://github.com/absolute-version/absolute-version-js/compare/v3.0.0...v3.0.1) (2026-11-25)
+
+
+### Reverts
+
+* "chore: Add lerna" ([3779309](https://github.com/absolute-version/absolute-version-js/commit/37793093b1c362a71ae9db55fc347febcc8aa1cb))
+
 ## [3.0.0](https://github.com/absolute-version/absolute-version-js/compare/v2.0.0...v3.0.0) (2026-08-31)
 
 
